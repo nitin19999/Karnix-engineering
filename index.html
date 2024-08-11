@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Karnix engineering</title>
 
     <!-- Bootstrap core CSS -->
@@ -51,8 +51,10 @@ https://templatemo.com/tm-565-onix-digital
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="assets/images/karnixLogo.png" srcset="assets/images/karnixLogo.png 2x, assets/images/karnixLogo.png 3x" style="width: 300px; height: 100px;">
+              <img id="logoImg" src="assets/images/KRLogo.png" 
+                   style="width: 300px; height: 80px; border-radius: 20px;">
             </a>
+            
             
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -91,7 +93,7 @@ https://templatemo.com/tm-565-onix-digital
                     <div class="main-blue-button-hover">
                       <a href="mailto:sale@karnixengineering.com">sale@karnixengineering.com</a>
                     </div>
-                    <div class="call-button">
+                    <div style="margin-top: 5px;" class="call-button">
                       <a href="tel:+919423948515"><i class="fa fa-phone"></i> 91-9423948515</a>
                     </div>
                   </div>
@@ -706,7 +708,7 @@ https://templatemo.com/tm-565-onix-digital
         <div class="col-lg-3">
           <div class="about footer-item">
             <div class="logo">
-              <a href="index.html"><img style="border-radius: 30px;" src="assets/images/KarNixLogo2.png" alt="Onix Digital TemplateMo"></a>
+              <a href="index.html"><img style="width:auto; height: 80px;border-radius: 40px;margin-bottom: -1px;" src="assets/images/KR WEB@4x-80.jpg" alt="Karnix engineering"></a>
             </div>
             <a href="mailto:sale@karnixengineering.com">sale@karnixengineering.com</a>
             <ul>
@@ -732,27 +734,47 @@ https://templatemo.com/tm-565-onix-digital
             </ul>
           </div>
         </div>
-        <!-- <div class="col-lg-3">
+         <div class="col-lg-3">
           <div class="community footer-item">
-            <h4>Community</h4>
+            <!-- <h4>Community</h4>
             <ul>
               <li><a href="#">Digital Marketing</a></li>
               <li><a href="#">Business Ideas</a></li>
               <li><a href="#">Website Checkup</a></li>
               <li><a href="#">Page Speed Test</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="subscribe-newsletters footer-item">
-            <h4>Subscribe Newsletters</h4>
-            <p>Get our latest news and ideas to your inbox</p>
-            <form action="#" method="get">
-              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-              <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
-            </form>
-          </div>
-        </div> -->
+          
+            <div class="subscribe-newsletters footer-item" style="padding: 20px; background-color: #f8f9fa; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h4 style="margin-bottom: 15px; color: #343a40;">Karnix Engineering</h4>
+                <p style="display: flex; align-items: center; margin: 5px 0;">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #007bff;"></i> 
+                    <a href="https://www.google.com/maps/search/?api=1&query=Office+302,+Fifth+Avenue,+Hadapsar,+Pune+411028" target="_blank" style="color: #343a40; text-decoration: none;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#343a40'">
+                        Office 302, Fifth Avenue, Hadapsar, Pune 411028
+                    </a>
+                </p>
+                <p style="display: flex; align-items: center; margin: 5px 0;">
+                    <i class="fas fa-phone" style="margin-right: 10px; color: #007bff;"></i> 
+                    <a href="tel:+919423948515" style="color: #343a40; text-decoration: none;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#343a40'">
+                        91-9423948515
+                    </a>
+                </p>
+                <p style="display: flex; align-items: center; margin: 5px 0;">
+                    <i class="fas fa-envelope" style="margin-right: 10px; color: #007bff;"></i> 
+                    <a href="mailto:sale@karnixengineering.com" style="color: #343a40; text-decoration: none;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#343a40'">
+                        sale@karnixengineering.com
+                    </a>
+                </p>
+                 <p style="display: flex; align-items: center; margin: 5px 0;">
+                    <i class="fas fa-envelope" style="margin-right: 10px; color: #007bff;"></i> 
+                    <a href="mailto:Info@karnixengineering.com" style="color: #343a40; text-decoration: none;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#343a40'">
+                      Info@karnixengineering.com
+                    </a>
+                </p>
+            </div>
+      
         <!-- <div class="col-lg-12">
           <div class="copyright">
             <p>Copyright © 2021 Onix Digital Co., Ltd. All Rights Reserved. 
@@ -806,7 +828,24 @@ https://templatemo.com/tm-565-onix-digital
       
       element.classList.toggle('active');
     }
-    
+    function updateLogo() {
+      var img = document.getElementById('logoImg');
+      if (window.innerWidth <= 768) {
+        img.src = 'assets/images/KR WEB@4x-80.jpg';
+        img.style.width = '250px';  // Adjust width for smaller screens
+        img.style.height = '70px';  // Adjust height for smaller screens
+      } else {
+        img.src = 'assets/images/KRLogo.png';
+        img.style.width = '300px';
+        img.style.height = '80px';
+      }
+    }
+  
+    // Initial check on page load
+    updateLogo();
+  
+    // Update the logo image on window resize
+    window.addEventListener('resize', updateLogo);
   </script>
 </body>
 </html>
